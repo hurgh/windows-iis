@@ -11,6 +11,7 @@ define windows-iis::site inherits windows-iis::params (
   notify {'windows-iis site':
 	message => "Windows IIS Site Addition:\n
 				Site Path: ${site_path}\n
+				Name: ${name}\n
 				Hostname: ${hostname}\n",
 	}
   

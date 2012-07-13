@@ -94,5 +94,14 @@ class windows-iis inherits windows-iis::params {
 		ensure => present,
 		require => Dism['IIS-WebServerManagementTools'],
 	}
-
+	
+	windows-iis::site { 'Additional Site':
+		require 	=> Dism['IIS-WebServer'],
+		hostname	=> 'additional.hurgh.org',
+		procotol	=> 'https',
+		ipaddress	=> '172.30.30.1',
+		port		=> '443',
+		certhash	=> 'NA',
+		appid		=> 'NA',
+	}
 }

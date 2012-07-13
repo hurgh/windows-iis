@@ -1,3 +1,3 @@
 class windows-iis::params {
-	$site_path = "C:/Websites"
+	$site_path = "D:/Websites"
 }
