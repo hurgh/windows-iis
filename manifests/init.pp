@@ -3,7 +3,7 @@
 # DISM: http://technet.microsoft.com/en-us/library/dd744311(v=ws.10)
 # requires the DISM module
 
-class windows-iis {
+class windows-iis inherits windows-iis::params {
 
 	dism { 'IIS-WebServerRole':
 		ensure => present,
