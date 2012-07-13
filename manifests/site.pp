@@ -6,8 +6,9 @@ define windows-iis::site (
   $certhash,
   $appid,
 ) {
-  $site_path = "${windows-iis::params::site_path}/${name}"
-
+ # $site_path = "${windows-iis::params::site_path}/${name}"
+	$site_path = 'Test'
+	
   notify {'windows-iis site':
 	message => "Windows IIS Site Addition:\n
 				Site Path: ${site_path}\n
