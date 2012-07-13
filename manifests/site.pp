@@ -1,4 +1,4 @@
-define windows-iis::site inherits windows-iis::params (
+define windows-iis::site (
   $hostname,
   $procotol,
   $ipaddress,
