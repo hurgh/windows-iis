@@ -7,7 +7,6 @@ define iis::site (
   $appid,
 ) {
   $site_path = "${iis::params::site_path}/${name}"
-#	$site_path = 'Test'
 	
   notify {'windows iis site':
 	message => "Windows IIS Site Addition:\n
