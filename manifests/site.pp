@@ -1,4 +1,4 @@
-define windows-iis::site (
+define iis::site (
   $hostname,
   $procotol,
   $ipaddress,
@@ -6,8 +6,8 @@ define windows-iis::site (
   $certhash,
   $appid,
 ) {
- # $site_path = "${windows-iis::params::site_path}/${name}"
-	$site_path = 'Test'
+  $site_path = "${iis::params::site_path}/${name}"
+#	$site_path = 'Test'
 	
   notify {'windows-iis site':
 	message => "Windows IIS Site Addition:\n

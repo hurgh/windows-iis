@@ -3,7 +3,7 @@
 # DISM: http://technet.microsoft.com/en-us/library/dd744311(v=ws.10)
 # requires the DISM module
 
-class windows-iis inherits windows-iis::params {
+class iis inherits iis::params {
 
 	dism { 'IIS-WebServerRole':
 		ensure => present,
@@ -95,7 +95,7 @@ class windows-iis inherits windows-iis::params {
 		require => Dism['IIS-WebServerManagementTools'],
 	}
 	
-	windows-iis::site { 'Additional Site':
+	iis::site { 'Additional Site':
 		require 	=> Dism['IIS-WebServer'],
 		hostname	=> 'additional.hurgh.org',
 		procotol	=> 'https',
